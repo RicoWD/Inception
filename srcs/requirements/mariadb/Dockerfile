@@ -12,7 +12,7 @@
 
 FROM debian:bookworm
 
-RUN apt update && apt install -y --no-install-recommends maria-server && apt clean && rm -rf /var/lib/apt/lists*
+RUN apt update && apt install -y --no-install-recommends mariadb-server && apt clean && rm -rf /var/lib/apt/lists/*
 
 COPY ./tools/mariadb.sh /usr/local/bin
 

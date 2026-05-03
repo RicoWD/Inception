@@ -10,3 +10,24 @@
 #                                                                              #
 # **************************************************************************** #
 
+FROM debian:bookworm
+
+ARG LOGIN
+
+RUN apt-get update -y \
+    && apt-get install -y nginx openssl \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN mkdir -p /etc/nginx/ssl
+
+RUN openssl req -x509 -nodes \
+    -out /etc/nginx/ssl/inception.crt \
+    -keyout /etc/nginx/ssl/inception.key \
+    -subj "/C=FR/ST=IDF/L=Paris/O=42/OU=42/CN=${LOGIN}.42.fr/UID=${LOGIN}"
+
+COPY conf/nginx.conf /etc/nginx/conf.d/default.conf
+COPY tools/nginx.sh /usr/local/bin/nginx.sh
+
+RUN chmod +x /usr/local/bin/nginx.sh
+
+ENTRYPOINT ["/usr/local/bin/nginx.sh"]
