@@ -1,0 +1,9 @@
+# .env
+srcs/.env
+
+# Garbage
+.DS_Store
+*.swp
+
+# doc
+/_doc
