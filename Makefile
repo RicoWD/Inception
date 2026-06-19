@@ -1,12 +1,14 @@
 NAME		= Inception
 DOCKER_COMPOSE	= docker compose -f ./srcs/docker-compose.yml
-PATH_DATA	= /home/$(USER)/data
+LOGIN		:= $(shell grep -E '^LOGIN=' ./srcs/.env | cut -d '=' -f2)
+PATH_DATA	= /home/$(LOGIN)/data
 
 all: up
 
 setup:
 	@mkdir -p $(PATH_DATA)/mariadb
 	@mkdir -p $(PATH_DATA)/wordpress
+	@mkdir -p $(PATH_DATA)/redis
 
 up:setup
 	@$(DOCKER_COMPOSE) up -d --build
