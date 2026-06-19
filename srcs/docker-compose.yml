@@ -82,6 +82,36 @@ services:
       - redis_data:/data
     restart: always
 
+  ftp:
+    build:
+      context: ./requirements/bonus/ftp
+    image: ftp:inception
+    container_name: ftp
+    depends_on:
+      - wordpress
+    environment:
+      FTP_USER: ${FTP_USER}
+      FTP_PASS: ${FTP_PASS}
+    ports:
+      - "21:21"
+      - "21100-21110:21100-21110"
+    volumes:
+      - wordpress_data:/var/www/html
+    networks:
+      - inception
+    restart: always
+
+  static_ws:
+    build:
+      context: ./requirements/bonus/static_ws
+    image: static_ws:inception
+    container_name: static_ws
+    ports:
+      - "8081:80"
+    networks:
+      - inception
+    restart: always
+
 volumes:
   mariadb_data:
     driver: local
