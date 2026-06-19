@@ -1,181 +1,267 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="index.css">
+		<!-- <link href="css/icomoon.css" rel="stylesheet"> -->
+			<title>John Doe</title>
+	</head>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Eric's Mini-Portfolio</title>
-</head>
-<style>
-	* {
-		margin: 0;
-		padding: 0;
-		box-sizing: border-box;
-	}
-
-	html {
-		scroll-behavior: smooth;
-	}
-
-	body {
-		background: var(--white-broken);
-	}
-
-	img {
-		max-height: 100%;
-		display: block;
-	}
-
-	ul li {
-		list-style: none;
-	}
-
-	button,
-	a,
-	{
-	cursor: pointer;
-	}
-
-	ul {
-		list-style: none;
-	}
-
-	ol li {
-		list-style: auto !important;
-	}
-
-	ol li::marker {
-		font-weight: 900;
-		color: var(--brown);
-	}
-
-	nav {
-		display: flex;
-		justify-content: space-between;
-		padding: 0 1em;
-		background-color: floralwhite;
-	}
-
-	nav div {
-		max-height: 10vh;
-	}
-</style>
-
-<body>
-	<header>
-		<h1></h1>
+	<body id="overflow">
+		
 		<nav>
-			<div>
-				<img src="assets/images/logo.png" />
-			</div>
+			<figure class="mobileHidden"><img src="assets/images/logo.png" alt="Logo EP"></figure>
+			<h2 id="clock">
+				<span id="hours"></span>
+				<span id="minutes"></span>
+				<span id="seconds"></span>
+			</h2>
 			<ul>
-				<li>Home</li>
-				<li>Contact</li>
+				<li><a class="icon-home iconNav" href=""><p>home</p></a></li>
+				<li><a class="icon-user iconNav" href="#myName"><p>about</p></a></li>
+				<li><a class="icon-eye iconNav" href="#myPhotos"><p>photos</p></a></li>
+				<li><a class="icon-envelope iconNav" href="#contactMe"><p>contact</p></a></li>
 			</ul>
 		</nav>
-	</header>
 
-	<main>
-		<section id="main"></section>
-		<section id="present"></section>
-		<section id="projects"></section>
-		<h2>My projects</h2>
-		<div id="containerProjects">
-			<article>
-				<h3>Libft</h3>
-				<div class="projects">
-					<img src="" />
-					<p>Grade: 100</p>
-					<a>Github</a>
-				</div>
-			</article>
+		<header>
+			<h1>Eric Pascual.</h1>
+			<h2>Developer & Marketer</h2>
+			
+				<figure>
+					<img src="assets/images/eric_pascual.png" alt="Eric Pascual's image">
+				</figure>
+		</header>
 
-			<article>
-				<h3></h3>
-				<div class="projects">
-					<img src="" />
-					<p>Grade: 100</p>
-					<a>Github</a>
-				</div>
-			</article>
+		<main>
 
-			<article>
-				<h3></h3>
-				<div class="projects">
-					<img src="" />
-					<p>Grade: 100</p>
-					<a>Github</a>
-				</div>
-			</article>
+			<section id="myName">
+				<h3>Who I am</h3>
+				<hr>
+				<p>I'm a developer trained at School 42 Paris, specializing in artificial intelligence. What drives me is the constant pursuit of new ways to build — exploring fresh languages, frameworks, and approaches to solve real problems.
+Before code, I worked in marketing, where I learned to truly understand what a client needs and how to capture an audience's attention. I bring that same instinct to development: it's not enough to make something that works — it has to communicate clearly and serve the people who use it. I see AI as a tool to make that communication smarter, faster, and more relevant.</p>
+			</section>
 
-			<article>
-				<h3></h3>
-				<div class="projects">
-					<img src="" />
-					<p>Grade: 100</p>
-					<a>Github</a>
-				</div>
-			</article>
+			<section id="mySkills">
+					<h4>My Skills</h4>
+				<article>
+					<div>
+						<h6>C Programming</h6>
+						<div class="white">
+							<p id="photography"></p>
+						</div>
+					</div>
+					<div>
+						<h6>Object Oriented Programming - C++ | Python</h6>
+						<div class="white">
+							<p id="webDesign"></p>					
+						</div>
+					</div>
+					<div>
+						<h6>Web - JS/TS | React | Django</h6>
+						<div class="white">
+							<p id="photoshop"></p>					
+						</div>
+					</div>
+				</article>
+				<article id="mySkillsNumbers">
+					<dl>
+						<div>
+							<dt>11</dt>
+							<dd>C</dd>
+						</div>
 
-			<article>
-				<h3></h3>
-				<div class="projects">
-					<img src="" />
-					<p>Grade: 100</p>
-					<a>Github</a>
-				</div>
-			</article>
+						<div>
+							<dt>3</dt>
+							<dd>C++</dd>
+						</div>
+						
+						<div>
+							<dt>14</dt>
+							<dd>Web</dd>
+						</div>
+						
+						<div>
+							<dt>3</dt>
+							<dd>Systems & Networks</dd>
+						</div>
+					</dl>
+				</article>
+				<article>
+					<a href="" class="icon-download">Download Resume</a>
+				</article>
+			</section>
 
-			<article>
-				<h3></h3>
-				<div class="projects">
-					<img src="" />
-					<p>Grade: 100</p>
-					<a>Github</a>
+			<section id="myPrice">
+				<h4>My Price</h4>
+				<div>
+					<article>
+						<h5>Basic</h5>
+						<ul>
+							<li>Web Design</li>
+							<li>Photography</li>
+							<li>5GB Storage</li>
+							<li>Mail Support</li>
+						</ul>
+						<div>
+							<p>$ 10</p>
+							<p>per month</p>
+						</div>
+						<div class="signUp"><a href="">Sign Up</a></div>
+					</article>
+					<article>
+						<h5>Pro</h5>
+						<ul>
+							<li>Web Design</li>
+							<li>Photography</li>
+							<li>50GB Storage</li>
+							<li>Endless Support</li>
+						</ul>
+						<div>
+							<p>$ 25</p>
+							<p>per month</p>
+						</div>
+						<div class="signUp"><a href="">Sign Up</a></div>
+					</article>
 				</div>
-			</article>
+			</section>
 
-			<article>
-				<h3></h3>
-				<div class="projects">
-					<img src="" />
-					<p>Grade: 100</p>
-					<a>Github</a>
-				</div>
-			</article>
+			<section id="myReputation">
+				<h4>My Reputation</h4>
+				<article>
+					<figure>
+						<img src="assets/images/bandmember.jpg" alt="Chris Fox picture">
+					</figure>
+					<div>
+						<p>Chris Fox. <span>CEO at Mighty Schools.</span></p>
+						<p>Jane Doe saved us from a web disaster.</p>
+					</div>
+				</article>
+				<article>
+					<figure>
+						<img src="assets/images/avatar_g2.jpg" alt="Rebecca Flex picture">
+					</figure>
+					<div>
+						<p>Rebecca Flex<span>CEO at Company.</span></p>
+						<p>No one is better than Jane Doe.</p>
+					</div>
+				</article>
 
-			<article>
-				<h3></h3>
-				<div class="projects">
-					<img src="" />
-					<p>Grade: 100</p>
-					<a>Github</a>
-				</div>
-			</article>
+			</section>
 
-			<article>
-				<h3></h3>
-				<div class="projects">
-					<img src="" />
-					<p>Grade: 100</p>
-					<a>Github</a>
-				</div>
-			</article>
+			<section id="myPhotos">
+				<h4>My Photos</h4>
+				<article id="gallery">
+					<ul>
+						<div>
+							<li><figure><img src="assets/images/wedding (1).jpg" alt="Mariage"></figure></li>
+							<li><figure><img src="assets/images/rocks.jpg" alt="Paysage rochers"></figure></li>
+							<li><figure><img src="assets/images/sailboat.jpg" alt="Voilier"></figure></li>
+						</div>
+						<div>
+							<li><figure><img src="assets/images/underwater.jpg" alt="Sous-marine"></figure></li>
+							<li><figure><img src="assets/images/chef.jpg" alt="Chef"></figure></li>
+							<li><figure><img src="assets/images/wedding (1).jpg" alt="Mariage"></figure></li>
+							<li><figure><img src="assets/images/p6.jpg" alt="Machine à écrire"></figure></li>
+						</div>
 
-			<article>
-				<h3></h3>
-				<div class="projects">
-					<img src="" />
-					<p>Grade: 100</p>
-					<a>Github</a>
-				</div>
-		</div>
-		</article>
-		<section id=""></section>
+					</ul>
+
+				</article>
+			</section>
 	</main>
-</body>
-<script>
+	<footer>
+		<section id="contactMe">
+				<h3>Contact Me</h3>
+				<hr>
+				<article>
+					<dl>
+						<!-- <figure><img src="assets/images/locate_white.png"></figure> -->
+						<dt class="icon-map-marker"></dt>
+						<dd><address>Chicago, US</address></dd>
+					</dl>
+					<dl>
+						<!-- <figure><img src="assets/images/phone-receiver.png"></figure> -->
+						<dt class="icon-phone"></dt>
+						<dd><p>Phone: +00 151515</p></dd>
+					</dl>
+					<dl>
+						<!-- <figure><img src="assets/images/envelope_white.png"></figure> -->
+						<dt class=" icon-envelope-o"></dt>
+						<dd><p>Email: mail@mail.com</p></dd>
+					</dl>				
+				</article>
+			</section>
 
-</script>
+			<section id="socialMedia">
+				<ul>
+					<li><a href="www.facebook.com/johndoe"><img src="assets/images/facebook.png"></a></li>
+					<li><a href="www.instagram.com/johndoe"><img src="assets/images/instagram.png"></a></li>
+					<li><a href="www.snapchat.com/johndoe"><img src="assets/images/snapchat.png"></a></li>
+					<li><a href="www.pinterest.com/johndoe"><img src="assets/images/pinterest.png"></a></li>
+					<li><a href="www.twiter.com/johndoe"><img src="assets/images/twitter.png"></a></li>
+					<li><a href="www.linkedin.com/johndoe"><img src="assets/images/linkedin.png"></a></li>
+				</ul>
+				<p>Powered by Eric</p>
+			</section>
+		
+	</footer>
 
-</html>
+	</body>
+
+
+	<script>
+
+		var galleryPhoto = document.querySelector("#gallery");
+		var divPhoto = document.createElement("div");
+			
+		var figurePhoto = document.createElement("figure");
+			divPhoto.appendChild(figurePhoto);
+		var imagePhoto = document.createElement("img");
+			figurePhoto.appendChild(imagePhoto);
+			imagePhoto.getAttribute("src");
+
+		var eachPhoto = document.querySelectorAll("#gallery img")
+
+		var overflow = document.querySelector("#overflow");
+
+		var closeButon = document.createElement("button")
+			closeButon.innerHTML="x"
+			figurePhoto.appendChild(closeButon)
+
+eachPhoto.forEach(function(identification){
+	identification.addEventListener("click", function(){
+			galleryPhoto.appendChild(divPhoto);
+			//imagePhoto.setAttribute("src", identification.getAttribute("src"))
+			imagePhoto.src = identification.src
+		})
+})
+
+divPhoto.addEventListener("click", function(){
+	galleryPhoto.removeChild(divPhoto)
+})
+
+closeButon.addEventListener("click", function(){
+	galleryPhoto.removeChild(divPhoto)
+})
+
+/*HORLOGE*/
+
+var	hours = document.querySelector("#hours");
+var	minutes = document.querySelector("#minutes");
+var	seconds = document.querySelector("#seconds")
+
+function timeRunnning(){
+	var horlogeRunning = new Date();
+		hours.innerHTML = horlogeRunning.getHours() + " : ";
+		minutes.innerHTML = horlogeRunning.getMinutes() + " : ";
+		seconds.innerHTML =	horlogeRunning.getSeconds();
+	interval = setTimeout(timeRunnning, 1000);
+}
+
+timeRunnning();
+
+
+	</script>
+
+	</html>

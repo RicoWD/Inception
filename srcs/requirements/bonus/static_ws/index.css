@@ -1,0 +1,650 @@
+@font-face{
+	font-family: "Montserrat ExtraLight";
+	src: url("assets/font/Montserrat-ExtraLight.ttf") format("truetype");
+}
+
+@font-face{
+	font-family: "Montserrat Regular";
+	src: url("assets/font/Montserrat-Regular.ttf") format("truetype");
+}
+
+@font-face{
+	font-family: "Montserrat Bold";
+	src: url("assets/font/Montserrat-SemiBold.ttf") format("truetype");
+}
+
+@font-face{
+	font-family: "Icomoon";
+	src: url("assets/fonts/icomoon.ttf") format("truetype");
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html{scroll-behavior: smooth}
+
+body{
+	font-size: calc(1em + 1vw);
+	font-family: "Montserrat ExtraLight";
+	background: black;
+	color: white;
+}
+
+main{font-size: .8em;}
+
+img{
+	max-width: 100%;
+	width: 100%;
+	display: block;}
+
+h3{
+	font-size: 2em;
+	padding-bottom: .5em;
+	animation-name: slideInLeft;
+	animation-duration: 1s;
+	animation-fill-mode: both;
+}
+
+@keyframes slideInLeft {
+	0% {transform: translateX(-100%); opacity: 0}
+	50% {transform: translateX(-50%); opacity: .5}
+	100% {transform: translateX(0); opacity: 1}
+} 
+
+hr{
+	width: 30vw;
+	color: grey;
+}
+
+section{
+	padding: 2vw;
+}
+
+h4{
+	font-size: 1.3em;
+	padding-bottom: .5em;
+	animation-name: slideInLeft;
+	animation-duration: 1s;
+	animation-fill-mode: both;
+}
+
+ul{
+	list-style: none;
+}
+
+li{
+	padding: 0;
+}
+
+p{
+	font-family: "Montserrat ExtraLight";
+}
+
+button, a{
+	cursor: pointer;
+	font-family: "Montserrat ExtraLight";
+	text-decoration-line: none;
+}
+
+/****************************************NAV****************************************/
+
+.mobileHidden{
+	display: none;
+}
+
+nav{
+	height: 3vh;
+	font-family: "Montserrat ExtraLight";
+	position: sticky;
+	top: 0;
+	left: 0;
+	background: black;
+	z-index: 11;
+}
+
+nav ul{
+	list-style: none;
+	justify-content: space-around;
+	align-content: center;
+	flex-flow: wrap row;
+	display: flex;
+	padding: 1vw 0;
+}
+
+nav a p{
+	text-decoration-line: none;
+	text-transform: uppercase;
+	color: white;
+	font-size: .8em;
+}
+
+nav a:before{
+	display: none;
+}
+
+nav ul li a:before{
+	animation-name: bounceInLeft;
+	animation-duration: 1s;
+	animation-fill-mode: both;
+}
+
+nav ul li:hover a:before{
+	animation-name: bounceInLeft;
+	animation-duration: 1s;
+	animation-fill-mode: both;
+}
+
+@keyframes bounceInLeft{
+	0%, 60%, 75%, 90%, 100% {transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);}
+	0% {opacity: 0; transform: translate3d(-3000px, 0, 0);}
+	60% {opacity: 1; transform: translate3d(25px, 0, 0);}
+	75% {transform: translate3d(-10px, 0, 0);}
+	90% {transform: translate3d(5px, 0, 0);}
+	100% {transform: none;}
+}
+
+nav ul:hover a:before{
+	animation-name: bounceOutLeft;
+	animation-duration: 1s;
+	animation-fill-mode: both;
+}
+
+@keyframes bounceOutLeft{
+  20% {opacity: 1; transform: translate3d(20px, 0, 0);}
+  100% {opacity: 0;transform: translate3d(-2000px, 0, 0);}
+}
+
+nav ul li:hover:before{
+	animation-name: bounceInLeft;
+	animation-duration: .75s;
+	animation-duration: 1s;
+	animation-fill-mode: both;
+}
+
+/****************************************HEADER****************************************/
+
+h1, h2{
+	text-align: center;
+}
+
+h1{
+	padding: 5vw 0;
+	font-size: 3.5em;
+	-webkit-text-stroke: 1.2px white;
+	color: transparent;
+	font-weight: bolder;
+}
+
+h2{
+	font-size: 1em;
+	-webkit-text-stroke: 1.2px white;
+	color: transparent;
+}
+
+#clock{
+	margin-top: 1em;
+}
+
+h2 > span{
+	font-size: .8em;
+	-webkit-text-stroke: .2px white;
+	color: transparent;
+	font-weight: bolder;
+}
+
+/****************************************MY NAME****************************************/
+
+#myName p{
+	text-align: justify;
+	padding-top: 2vw;
+}
+
+/****************************************MY SKILLS****************************************/
+
+#mySkills article{
+	margin: 5% 0;
+}
+
+/****************************PWP************************/
+
+
+h6{
+	letter-spacing: .3em;
+	margin: 2vw 0;
+	font-family: "Montserrat ExtraLight";
+}
+
+article div.white{
+	background: white;
+	height: 3vh;
+}
+
+article p#photography{
+	width: 95%;
+	background: #616161;
+	height: 100%;
+	animation-name: animPhotography;
+	animation-duration: 2.6s;
+	animation-timing-function: ease;
+}
+
+@keyframes animPhotography{
+	0% {width: 0%; opacity: 0;}
+	100% {width: 95%; opacity: 1;}
+}
+
+article p#webDesign{
+	width: 90%;
+	background: #616161;
+	height: 100%;
+	animation-name: animWebDesign;
+	animation-duration: 2.3s;
+	animation-timing-function: ease;
+}
+
+@keyframes animWebDesign{
+	0% {width: 0%; opacity: 0;}
+	100% {width: 90%; opacity: 1;}
+}
+
+article p#photoshop{
+	width: 85%;
+	background: #616161;
+	height: 100%;
+	animation-name: animPhotoshop;
+	animation-duration: 2s;
+	animation-timing-function: ease;
+}
+
+@keyframes animPhotoshop{
+	0% {width: 0%; opacity: 0;}
+	100% {width: 85%; opacity: 1;}
+}
+
+/****************************Numbers************************/
+
+#mySkillsNumbers{
+	background: #f1f1f1;
+	text-align: center;
+	color: black;
+}
+
+#mySkillsNumbers dt{
+	padding-top: 1em;
+	font-family: "Montserrat Bold";
+}
+
+#mySkillsNumbers dd{
+	padding-bottom: 1em;
+	font-family: "Montserrat Regular";
+}
+
+/****************************Download************************/
+
+#mySkills article:last-of-type{
+	display: flex;
+
+}
+
+#mySkills a{
+	width: 80%;
+	background: #f1f1f1;
+	border: none;
+	color: black;
+	text-align: center;
+	position: relative;
+	font-family: "Montserrat Regular";
+	font-size: .8em;
+	padding: 2vw 0;
+}
+
+#mySkills a:before{
+	font-family: "Icomoon";
+	content: "\f019";
+	font-size: 1.2em;
+	vertical-align: center;
+	padding: 0vw 2vw ;
+	text-align: center;
+}
+
+/****************************************MY PRICE****************************************/
+
+#myPrice article{
+	background: #999;
+	text-align: center;
+}
+
+#myPrice > article > div{
+	background: none;
+}
+
+#myPrice article li{
+	padding: 1.5vh 0;
+	border-bottom: 1px solid grey;
+	font-family: "Montserrat Regular";
+	font-size: 0.8em;
+}
+
+#myPrice article ul{
+	color: black;
+}
+
+#myPrice div article{
+	margin: 5% 0;
+}
+
+h5{
+	background: #3a3a3a;
+	padding: 3vh 0;
+	font-family: "Montserrat Regular";
+	font-size: 1.6em;
+	color: grey;
+}
+
+#myPrice > div:first-of-type{
+	background-color: #000;
+	padding: 3vh 0;	
+}
+
+#myPrice > div:last-child{
+	padding: 4vh 0;
+	background: #000;
+}
+
+#myPrice article div p:first-of-type{
+	font-family: "Montserrat Regular";
+	font-size: 2em;
+	color: black;
+} 
+
+#myPrice article div p:last-of-type{
+	color: #3d3d3d;
+	padding-bottom: 1vh;
+}
+
+.signUp{
+	padding: 4vh 0;
+	background: #909090;
+}
+
+#myPrice a{
+	padding: 1.5% 3%;
+	font-size: .8em;
+	color: black;
+	background-color: #999;
+	font-family: "Montserrat Regular";
+}
+
+/****************************************MY REPUTATION****************************************/
+
+#myReputation article{
+	display: flex;
+	align-items: center;
+}
+
+#myReputation figure{
+	border-radius: 100%;
+	overflow: hidden;
+	width: 10%;
+}
+
+#myReputation > article > div{
+	width: 90%;
+	margin: 3%;
+}
+
+#myReputation span{
+	padding-left: 3%;
+}
+
+#myReputation div p{
+	padding: .8vh;
+}
+
+#myReputation{
+	margin-bottom: 10%;
+}
+
+/****************************************MY PHOTOS****************************************/
+
+#myPhotos ul li img{margin: 2% 0;}
+
+#myPhotos button{
+	background: none;
+	border: none;
+}
+
+#myPhotos button{
+	width: 100%;
+}
+
+#myPhotos article{
+	position: relative;
+}
+
+#myPhotos > article > div:last-child{
+	
+	background: rgba(0, 0, 0, 0.7);
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	position: fixed;
+}
+
+#myPhotos > article > div:last-child > figure{
+	position: absolute;
+	top: 5%;
+	left: 25%;
+	max-width: 100%;
+	width: 50%;
+	height: auto;
+}
+
+#myPhotos > article > div:last-child > figure > img{
+	max-height: 100%;
+}
+
+#myPhotos button{
+	border-radius: 100%;
+	width: 4vw;
+	height: 4vh;
+	font-size: 1.2em;
+	position: absolute;
+	top: 5%;
+	right: 5%;
+	background: white;
+}
+
+
+
+/****************************************CONTACT ME****************************************/
+
+#contactMe dl{
+	display: flex;
+	align-items: center;
+	padding: 2%;
+}
+
+#contactMe hr{
+	width: 40vw;
+	color: grey;
+}
+
+#contactMe dt{width: 3%; margin-right: 2%}
+#contactMe dd{width: 97%;}
+
+/****************************************FOOTER****************************************/
+footer{margin: 10% 0}
+footer ul{display: flex}
+footer li{width: 4%; margin: .5%}
+footer p{padding: 2% 0}
+
+/****************************************RESPONSIVE****************************************/
+
+@media screen and (min-width: 768px){
+
+	html{font-sise: 62.5%}
+	body{font-size: calc(.8em + 1vw);
+		width: 100vw}
+	header, main, footer{
+		margin-left: auto;
+		padding: 0 10%;
+		width: 85%;}
+
+	/*****************************NAV**************************/
+
+	.mobileHidden{
+		display: block;
+		padding: .7em;
+	}
+
+	nav{
+		position: fixed;
+		top: 0;
+		left: 0;
+		padding: 0;
+		color: white;
+		width: 12%;
+		height: 80vh;
+		background: #222;
+		z-index: 11;
+	}
+
+	nav ul{
+		display: flex;
+		justify-content: center;
+		flex-flow: column;
+	}
+
+	nav a{
+		text-decoration-line: none;
+		color: white;
+		font-size: 1em;
+		padding: 10%;
+	}
+
+	nav a:hover{
+		background: black;
+	}
+
+	nav li{
+		display: flex;
+		flex-flow: wrap column;
+		text-align: center;
+		padding: 10% 0;
+	}
+
+	nav a:before{
+		font-size: 2em;
+		display: block;
+	}
+
+	nav p{
+		padding: 7% 0;
+	}
+
+	
+
+	/*****************************HEADER**************************/
+
+	h1:before{
+		content: "I'm ";
+	}
+
+	/*****************************MY SKILLS**************************/
+
+	#mySkillsNumbers dl{
+		display: flex;
+		flex-flow: wrap row;
+		justify-content: space-around;
+		padding: 5%;
+	}
+
+	#mySkills article:last-child a{
+		width: 50%;
+	}
+
+	#myName hr{
+		display: none
+	}
+
+	/*****************************MY PRICE**************************/
+
+	#myPrice > div{
+		display: flex;
+		background: none;
+	}
+
+	#myPrice > div > article{
+		width: 50%;
+		padding-top: 0;
+		height: 100%;
+	}
+
+	#myPrice > div > article:first-child{
+			margin-right: 2%;
+	}
+
+	#myPrice div:first-of-type{
+		background: none;
+	}
+
+	/*****************************MY PHOTO**************************/
+
+	#myPhotos ul{
+		display: flex;
+		justify-content: space-between;
+	}
+
+	#myPhotos article div{
+		width: 49%;
+	}
+
+	#myPhotos > article > div:last-child > figure{
+	position: absolute;
+	top: 5%;
+	left: 30%;
+	max-width: 100%;
+	width: 50%;
+	height: auto;
+}
+
+	/*****************************FOOTER**************************/
+	footer{
+
+		display: flex;
+		align-items: center;
+	}
+
+	#contactMe{
+		width: 70%;
+	}
+
+	#contactMe article{
+		margin-top: 5%;
+	}
+
+	#contactMe dd{
+		font-size: .8em;
+		margin-left: 10%;
+	}
+
+	#socialMedia{
+		width: 30%;
+	}
+
+	#socialMedia li{
+		width: 15%;
+	}
+
+	#socialMedia p{
+		font-size: .5em;
+		padding-top: 10%;
+	}
+
+}
