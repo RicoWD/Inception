@@ -3,9 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<link rel="icon" type="image/png" href="assets/images/logo.png">
-		<link rel="stylesheet" type="text/css" href="index.css?v=4">
-		<!-- <link href="css/icomoon.css" rel="stylesheet"> -->
-			<title>John Doe</title>
+		<link rel="stylesheet" type="text/css" href="index.css?v=5">
+		<title>Eric Pascual</title>
 	</head>
 
 	<body id="overflow">
@@ -42,7 +41,7 @@
 			<h2>Developer & Marketer</h2>
 			
 				<figure>
-					<img src="assets/images/eric_pascual.png" alt="Eric Pascual's image">
+					<img  id="mainPic" src="assets/images/eric_pascual.png" alt="Eric Pascual's image">
 				</figure>
 		</header>
 
@@ -101,7 +100,7 @@ Before code, I worked in marketing, where I learned to truly understand what a c
 					</dl>
 				</article>
 				<article>
-					<a href="" class="icon-download">Download Resume</a>
+					<a href="">Download Resume</a>
 				</article>
 			</section>
 
@@ -201,39 +200,6 @@ Before code, I worked in marketing, where I learned to truly understand what a c
 
 
 	<script>
-
-		var galleryPhoto = document.querySelector("#gallery");
-		var divPhoto = document.createElement("div");
-			
-		var figurePhoto = document.createElement("figure");
-			divPhoto.appendChild(figurePhoto);
-		var imagePhoto = document.createElement("img");
-			figurePhoto.appendChild(imagePhoto);
-			imagePhoto.getAttribute("src");
-
-		var eachPhoto = document.querySelectorAll("#gallery img")
-
-		var overflow = document.querySelector("#overflow");
-
-		var closeButon = document.createElement("button")
-			closeButon.innerHTML="x"
-			figurePhoto.appendChild(closeButon)
-
-eachPhoto.forEach(function(identification){
-	identification.addEventListener("click", function(){
-			galleryPhoto.appendChild(divPhoto);
-			//imagePhoto.setAttribute("src", identification.getAttribute("src"))
-			imagePhoto.src = identification.src
-		})
-})
-
-divPhoto.addEventListener("click", function(){
-	galleryPhoto.removeChild(divPhoto)
-})
-
-closeButon.addEventListener("click", function(){
-	galleryPhoto.removeChild(divPhoto)
-})
 
 /*HORLOGE*/
 

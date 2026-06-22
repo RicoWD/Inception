@@ -13,11 +13,6 @@
 	src: url("assets/font/Montserrat-SemiBold.ttf") format("truetype");
 }
 
-@font-face{
-	font-family: "Icomoon";
-	src: url("assets/fonts/icomoon.ttf") format("truetype");
-}
-
 *{
 	margin: 0;
 	padding: 0;
@@ -121,28 +116,12 @@ nav a p{
 	font-size: .8em;
 }
 
-nav a:before{
-	display: none;
-}
-
 /* Icônes SVG de navigation (remplacent Icomoon) */
 .navIcon{
 	display: none;
 	width: clamp(22px, 2vw, 34px);
 	height: clamp(22px, 2vw, 34px);
 	color: white;
-}
-
-nav ul li a:before{
-	animation-name: bounceInLeft;
-	animation-duration: 1s;
-	animation-fill-mode: both;
-}
-
-nav ul li:hover a:before{
-	animation-name: bounceInLeft;
-	animation-duration: 1s;
-	animation-fill-mode: both;
 }
 
 @keyframes bounceInLeft{
@@ -152,24 +131,6 @@ nav ul li:hover a:before{
 	75% {transform: translate3d(-10px, 0, 0);}
 	90% {transform: translate3d(5px, 0, 0);}
 	100% {transform: none;}
-}
-
-nav ul:hover a:before{
-	animation-name: bounceOutLeft;
-	animation-duration: 1s;
-	animation-fill-mode: both;
-}
-
-@keyframes bounceOutLeft{
-  20% {opacity: 1; transform: translate3d(20px, 0, 0);}
-  100% {opacity: 0;transform: translate3d(-2000px, 0, 0);}
-}
-
-nav ul li:hover:before{
-	animation-name: bounceInLeft;
-	animation-duration: .75s;
-	animation-duration: 1s;
-	animation-fill-mode: both;
 }
 
 /****************************************HEADER****************************************/
@@ -309,15 +270,6 @@ article p#photoshop{
 	padding: 2vw 0;
 }
 
-#mySkills a:before{
-	font-family: "Icomoon";
-	content: "\f019";
-	font-size: 1.2em;
-	vertical-align: center;
-	padding: 0vw 2vw ;
-	text-align: center;
-}
-
 /****************************Project tiles************************/
 
 /* Légende des types de projet */
@@ -390,56 +342,6 @@ article p#photoshop{
 .type-system  {color: #9b59b6; --c: #9b59b6;} /* Système / Processus */
 .type-algo    {color: #2ecc71; --c: #2ecc71;} /* Algorithmie */
 .type-lib     {color: #1abc9c; --c: #1abc9c;} /* Bibliothèque C */
-
-#myPhotos button{
-	background: none;
-	border: none;
-}
-
-#myPhotos button{
-	width: 100%;
-}
-
-#myPhotos article{
-	position: relative;
-}
-
-#myPhotos > article > div:last-child{
-	
-	background: rgba(0, 0, 0, 0.7);
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 1;
-	position: fixed;
-}
-
-#myPhotos > article > div:last-child > figure{
-	position: absolute;
-	top: 5%;
-	left: 25%;
-	max-width: 100%;
-	width: 50%;
-	height: auto;
-}
-
-#myPhotos > article > div:last-child > figure > img{
-	max-height: 100%;
-}
-
-#myPhotos button{
-	border-radius: 100%;
-	width: 4vw;
-	height: 4vh;
-	font-size: 1.2em;
-	position: absolute;
-	top: 5%;
-	right: 5%;
-	background: white;
-}
-
-
 
 /****************************************CONTACT ME****************************************/
 
@@ -584,15 +486,6 @@ footer p{padding: 2% 0}
 		width: 49%;
 	}
 
-	#myPhotos > article > div:last-child > figure{
-	position: absolute;
-	top: 5%;
-	left: 30%;
-	max-width: 100%;
-	width: 50%;
-	height: auto;
-}
-
 	/*****************************FOOTER**************************/
 	footer{
 
@@ -625,5 +518,16 @@ footer p{padding: 2% 0}
 		font-size: .5em;
 		padding-top: 10%;
 	}
+
+}
+
+@media screen and (min-width: 1024px){
+	nav{
+		height: 100vh;
+	}
+
+	#mainPic {
+		padding: 3vh 30vh 25vh;
+	} 
 
 }
