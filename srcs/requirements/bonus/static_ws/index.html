@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<link rel="icon" type="image/png" href="assets/images/logo.png">
-		<link rel="stylesheet" type="text/css" href="index.css?v=3">
+		<link rel="stylesheet" type="text/css" href="index.css?v=4">
 		<!-- <link href="css/icomoon.css" rel="stylesheet"> -->
 			<title>John Doe</title>
 	</head>
@@ -18,10 +18,22 @@
 				<span id="seconds"></span>
 			</h2>
 			<ul>
-				<li><a class="icon-home iconNav" href=""><p>home</p></a></li>
-				<li><a class="icon-user iconNav" href="#myName"><p>about</p></a></li>
-				<li><a class="icon-eye iconNav" href="#myPhotos"><p>photos</p></a></li>
-				<li><a class="icon-envelope iconNav" href="#contactMe"><p>contact</p></a></li>
+				<li><a class="iconNav" href="">
+					<svg class="navIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>
+					<p>home</p>
+				</a></li>
+				<li><a class="iconNav" href="#myName">
+					<svg class="navIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>
+					<p>about</p>
+				</a></li>
+				<li><a class="iconNav" href="#myPhotos">
+					<svg class="navIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h6l2 2h10v10H3z"/></svg>
+					<p>projects</p>
+				</a></li>
+				<li><a class="iconNav" href="#contactMe">
+					<svg class="navIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+					<p>contact</p>
+				</a></li>
 			</ul>
 		</nav>
 
@@ -93,72 +105,16 @@ Before code, I worked in marketing, where I learned to truly understand what a c
 				</article>
 			</section>
 
-			<section id="myPrice">
-				<h4>My Price</h4>
-				<div>
-					<article>
-						<h5>Basic</h5>
-						<ul>
-							<li>Web Design</li>
-							<li>Photography</li>
-							<li>5GB Storage</li>
-							<li>Mail Support</li>
-						</ul>
-						<div>
-							<p>$ 10</p>
-							<p>per month</p>
-						</div>
-						<div class="signUp"><a href="">Sign Up</a></div>
-					</article>
-					<article>
-						<h5>Pro</h5>
-						<ul>
-							<li>Web Design</li>
-							<li>Photography</li>
-							<li>50GB Storage</li>
-							<li>Endless Support</li>
-						</ul>
-						<div>
-							<p>$ 25</p>
-							<p>per month</p>
-						</div>
-						<div class="signUp"><a href="">Sign Up</a></div>
-					</article>
-				</div>
-			</section>
-
-			<section id="myReputation">
-				<h4>My Reputation</h4>
-				<article>
-					<figure>
-						<img src="assets/images/bandmember.jpg" alt="Chris Fox picture">
-					</figure>
-					<div>
-						<p>Chris Fox. <span>CEO at Mighty Schools.</span></p>
-						<p>Jane Doe saved us from a web disaster.</p>
-					</div>
-				</article>
-				<article>
-					<figure>
-						<img src="assets/images/avatar_g2.jpg" alt="Rebecca Flex picture">
-					</figure>
-					<div>
-						<p>Rebecca Flex<span>CEO at Company.</span></p>
-						<p>No one is better than Jane Doe.</p>
-					</div>
-				</article>
-
-			</section>
 
 			<section id="myPhotos">
 				<h4>My Projects</h4>
 				<article id="gallery">
 					<ul class="legend">
-						<li class="type-devops">DevOps / Système</li>
-						<li class="type-web">Web / Multi-langage</li>
-						<li class="type-graphics">Graphisme</li>
+						<li class="type-devops">DevOps</li>
+						<li class="type-web">Web / Multi-language</li>
+						<li class="type-graphics">Graphic</li>
 						<li class="type-system">Système / Processus</li>
-						<li class="type-algo">Algorithmie</li>
+						<li class="type-algo">Algorithsm</li>
 						<li class="type-lib">Bibliothèque C</li>
 					</ul>
 					<ul class="projectGrid">
@@ -170,6 +126,10 @@ Before code, I worked in marketing, where I learned to truly understand what a c
 							<li><a class="projectCard type-web" href="https://github.com/The-42-Chosen/Les-Tontons-Forkeurs-Enrolent-Fmotte" target="_blank" rel="noopener">
 								<h5 class="projectName">Webserv</h5>
 								<p class="projectLang">C++ · Python · PHP · Shell</p>
+							</a></li>
+							<li><a class="projectCard type-system" target="_blank" rel="noopener">
+								<h5 class="projectName">C++ Modules</h5>
+								<p class="projectLang">C++</p>
 							</a></li>
 							<li><a class="projectCard type-graphics" href="https://github.com/The-42-Chosen/Cube3D_Rico-Billy" target="_blank" rel="noopener">
 								<h5 class="projectName">cub3D</h5>
@@ -188,6 +148,10 @@ Before code, I worked in marketing, where I learned to truly understand what a c
 							<li><a class="projectCard type-algo" href="https://github.com/RicoWD/C2-P2-Push_swap" target="_blank" rel="noopener">
 								<h5 class="projectName">Push Swap</h5>
 								<p class="projectLang">C</p>
+							</a></li>
+							<li><a class="projectCard type-devops" target="_blank" rel="noopener">
+								<h5 class="projectName">Born 2 Be Root</h5>
+								<p class="projectLang">Shell · Virtual Machine</p>
 							</a></li>
 							<li><a class="projectCard type-lib" href="https://github.com/RicoWD/C1-P2-Printf" target="_blank" rel="noopener">
 								<h5 class="projectName">Printf</h5>
@@ -210,31 +174,23 @@ Before code, I worked in marketing, where I learned to truly understand what a c
 				<hr>
 				<article>
 					<dl>
-						<!-- <figure><img src="assets/images/locate_white.png"></figure> -->
-						<dt class="icon-map-marker"></dt>
-						<dd><address>Chicago, US</address></dd>
+						<dt><svg class="contactIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.3-7-11a7 7 0 0 1 14 0c0 4.7-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></dt>
+						<dd><address>Melun, France</address></dd>
 					</dl>
 					<dl>
-						<!-- <figure><img src="assets/images/phone-receiver.png"></figure> -->
-						<dt class="icon-phone"></dt>
-						<dd><p>Phone: +00 151515</p></dd>
+						<dt><svg class="contactIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h3l2 5-2.5 1.5a11 11 0 0 0 5 5L16 13l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></dt>
+						<dd><p>Phone: +33 7 77 73 42 66</p></dd>
 					</dl>
 					<dl>
-						<!-- <figure><img src="assets/images/envelope_white.png"></figure> -->
-						<dt class=" icon-envelope-o"></dt>
-						<dd><p>Email: mail@mail.com</p></dd>
-					</dl>				
+						<dt><svg class="contactIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></dt>
+						<dd><p>Email: pascual.machio.eric@gmail.com</p></dd>
+					</dl>
 				</article>
 			</section>
 
 			<section id="socialMedia">
 				<ul>
-					<li><a href="www.facebook.com/johndoe"><img src="assets/images/facebook.png"></a></li>
-					<li><a href="www.instagram.com/johndoe"><img src="assets/images/instagram.png"></a></li>
-					<li><a href="www.snapchat.com/johndoe"><img src="assets/images/snapchat.png"></a></li>
-					<li><a href="www.pinterest.com/johndoe"><img src="assets/images/pinterest.png"></a></li>
-					<li><a href="www.twiter.com/johndoe"><img src="assets/images/twitter.png"></a></li>
-					<li><a href="www.linkedin.com/johndoe"><img src="assets/images/linkedin.png"></a></li>
+					<li><a href="https://www.linkedin.com/public-profile/settings/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_self_edit_contact_info%3B8MTibalzQq614URXQxQLPQ%3D%3D"><img src="assets/images/linkedin.png"></a></li>
 				</ul>
 				<p>Powered by Eric</p>
 			</section>

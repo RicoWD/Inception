@@ -125,6 +125,14 @@ nav a:before{
 	display: none;
 }
 
+/* Icônes SVG de navigation (remplacent Icomoon) */
+.navIcon{
+	display: none;
+	width: clamp(22px, 2vw, 34px);
+	height: clamp(22px, 2vw, 34px);
+	color: white;
+}
+
 nav ul li a:before{
 	animation-name: bounceInLeft;
 	animation-duration: 1s;
@@ -310,107 +318,78 @@ article p#photoshop{
 	text-align: center;
 }
 
-/****************************************MY PRICE****************************************/
+/****************************Project tiles************************/
 
-#myPrice article{
-	background: #999;
-	text-align: center;
-}
-
-#myPrice > article > div{
-	background: none;
-}
-
-#myPrice article li{
-	padding: 1.5vh 0;
-	border-bottom: 1px solid grey;
-	font-family: "Montserrat Regular";
-	font-size: 0.8em;
-}
-
-#myPrice article ul{
-	color: black;
-}
-
-#myPrice div article{
-	margin: 5% 0;
-}
-
-h5{
-	background: #3a3a3a;
-	padding: 3vh 0;
-	font-family: "Montserrat Regular";
-	font-size: 1.6em;
-	color: grey;
-}
-
-#myPrice > div:first-of-type{
-	background-color: #000;
-	padding: 3vh 0;	
-}
-
-#myPrice > div:last-child{
-	padding: 4vh 0;
-	background: #000;
-}
-
-#myPrice article div p:first-of-type{
-	font-family: "Montserrat Regular";
-	font-size: 2em;
-	color: black;
-} 
-
-#myPrice article div p:last-of-type{
-	color: #3d3d3d;
-	padding-bottom: 1vh;
-}
-
-.signUp{
-	padding: 4vh 0;
-	background: #909090;
-}
-
-#myPrice a{
-	padding: 1.5% 3%;
-	font-size: .8em;
-	color: black;
-	background-color: #999;
+/* Légende des types de projet */
+#myPhotos .legend{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	gap: .6em 1.4em;
+	margin-bottom: 6%;
+	font-size: .68em;
 	font-family: "Montserrat Regular";
 }
 
-/****************************************MY REPUTATION****************************************/
-
-#myReputation article{
+#myPhotos .legend li{
 	display: flex;
 	align-items: center;
+	letter-spacing: .05em;
 }
 
-#myReputation figure{
-	border-radius: 100%;
-	overflow: hidden;
-	width: 10%;
+#myPhotos .legend li:before{
+	content: "";
+	display: inline-block;
+	width: .85em;
+	height: .85em;
+	border-radius: 50%;
+	margin-right: .5em;
+	background: currentColor;
 }
 
-#myReputation > article > div{
-	width: 90%;
-	margin: 3%;
+/* Vignettes projets */
+.projectCard{
+	--c: #888888;
+	display: block;
+	background: #141414;
+	border: 1px solid #2a2a2a;
+	border-left: 5px solid var(--c);
+	border-radius: 8px;
+	padding: 1.1em 1.2em;
+	margin: 6% 0;
+	transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
 }
 
-#myReputation span{
-	padding-left: 3%;
+.projectCard:hover{
+	transform: translateY(-4px);
+	background: #1d1d1d;
+	box-shadow: 0 8px 22px rgba(0, 0, 0, 0.6);
 }
 
-#myReputation div p{
-	padding: .8vh;
+.projectCard .projectName{
+	margin: 0;
+	padding: 0;
+	background: none;
+	color: var(--c);
+	font-family: "Montserrat Bold";
+	font-size: 1.15em;
+	letter-spacing: .03em;
 }
 
-#myReputation{
-	margin-bottom: 10%;
+.projectCard .projectLang{
+	margin: .55em 0 0;
+	color: #cfcfcf;
+	font-size: .72em;
+	letter-spacing: .06em;
 }
 
-/****************************************MY PHOTOS****************************************/
-
-#myPhotos ul li img{margin: 2% 0;}
+/* Couleur de police par type de projet */
+.type-devops  {color: #e67e22; --c: #e67e22;} /* DevOps / Système */
+.type-web     {color: #e84393; --c: #e84393;} /* Web / Multi-langage */
+.type-graphics{color: #3498db; --c: #3498db;} /* Graphisme */
+.type-system  {color: #9b59b6; --c: #9b59b6;} /* Système / Processus */
+.type-algo    {color: #2ecc71; --c: #2ecc71;} /* Algorithmie */
+.type-lib     {color: #1abc9c; --c: #1abc9c;} /* Bibliothèque C */
 
 #myPhotos button{
 	background: none;
@@ -475,8 +454,21 @@ h5{
 	color: grey;
 }
 
-#contactMe dt{width: 3%; margin-right: 2%}
-#contactMe dd{width: 97%;}
+#contactMe dt{
+	flex: 0 0 auto;
+	margin-right: 4%;
+	display: flex;
+	align-items: center;
+}
+#contactMe dd{flex: 1;}
+
+/* Icônes SVG des contacts (remplacent Icomoon) */
+.contactIcon{
+	display: block;
+	width: clamp(20px, 1.4em, 28px);
+	height: clamp(20px, 1.4em, 28px);
+	color: white;
+}
 
 /****************************************FOOTER****************************************/
 footer{margin: 10% 0}
@@ -544,6 +536,14 @@ footer p{padding: 2% 0}
 		display: block;
 	}
 
+	.navIcon{
+		display: block;
+		margin: 0 auto;
+		animation-name: bounceInLeft;
+		animation-duration: 1s;
+		animation-fill-mode: both;
+	}
+
 	nav p{
 		padding: 7% 0;
 	}
@@ -571,27 +571,6 @@ footer p{padding: 2% 0}
 
 	#myName hr{
 		display: none
-	}
-
-	/*****************************MY PRICE**************************/
-
-	#myPrice > div{
-		display: flex;
-		background: none;
-	}
-
-	#myPrice > div > article{
-		width: 50%;
-		padding-top: 0;
-		height: 100%;
-	}
-
-	#myPrice > div > article:first-child{
-			margin-right: 2%;
-	}
-
-	#myPrice div:first-of-type{
-		background: none;
 	}
 
 	/*****************************MY PHOTO**************************/
