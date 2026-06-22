@@ -9,6 +9,7 @@ setup:
 	@mkdir -p $(PATH_DATA)/mariadb
 	@mkdir -p $(PATH_DATA)/wordpress
 	@mkdir -p $(PATH_DATA)/redis
+	@mkdir -p $(PATH_DATA)/portainer
 
 up:setup
 	@$(DOCKER_COMPOSE) up -d --build

@@ -57,6 +57,8 @@ This project demonstrates how to package an application stack as reproducible co
 1. Update values in srcs/.env for your local setup.
 2. Run make.
 3. Open https://erpascua.42.fr.
+4. For static https://erpascua.42.fr:8081.
+5. For Portainer https://erpascua.42.fr:9000.
 
 ### Useful commands
 - `make up`
@@ -102,4 +104,6 @@ All generated changes were manually reviewed, adjusted, and validated.
 - Redis
 > https://hub.docker.com/_/redis
 > https://medium.com/redis-with-raphael-de-lio/how-to-run-redis-locally-in-a-docker-container-and-manage-it-with-redis-insight-and-redis-cli-14b0af54e1d2
-
+- Portainer
+> https://hub.docker.com/r/portainer/portainer
+> https://docs.portainer.io

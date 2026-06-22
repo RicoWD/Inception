@@ -112,6 +112,20 @@ services:
       - inception
     restart: always
 
+  portainer:
+    build:
+      context: ./requirements/bonus/portainer
+    image: portainer:inception
+    container_name: portainer
+    ports:
+      - "9000:9000"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - portainer_data:/data
+    networks:
+      - inception
+    restart: always
+
 volumes:
   mariadb_data:
     driver: local
@@ -131,6 +145,12 @@ volumes:
       type: none
       o: bind
       device: /home/${LOGIN}/data/redis
+  portainer_data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /home/${LOGIN}/data/portainer
 
 networks:
   inception:
