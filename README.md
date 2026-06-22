@@ -60,7 +60,7 @@ This project demonstrates how to package an application stack as reproducible co
 4. Open https://erpascua.42.fr.
 5. For Adminer http://erpascua.42.fr:8080.
 6. For static WS http://erpascua.42.fr:8081.
-7. For Portainer http://erpascua.42.fr:9000.
+7. For Portainer `docker restart portainer` & http://erpascua.42.fr:9000.
 8. For Redis 
 ```bash
 docker exec wordpress wp redis status --allow-root --path=/var/www/html/wordpress
