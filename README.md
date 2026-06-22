@@ -57,8 +57,15 @@ This project demonstrates how to package an application stack as reproducible co
 1. Update values in srcs/.env for your local setup.
 2. Run make.
 3. Open https://erpascua.42.fr.
-4. For static https://erpascua.42.fr:8081.
-5. For Portainer https://erpascua.42.fr:9000.
+4. For Adminer http://erpascua.42.fr:8080.
+5. For static WS http://erpascua.42.fr:8081.
+6. For Portainer http://erpascua.42.fr:9000.
+7. For Redis 
+```bash
+docker exec wordpress wp redis status --allow-root --path=/var/www/html/wordpress
+docker exec redis redis-cli monitor
+```
+8. For FTP `ftp -p localhost 21`
 
 ### Useful commands
 - `make up`

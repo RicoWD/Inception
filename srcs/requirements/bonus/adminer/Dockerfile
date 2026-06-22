@@ -1,7 +1,7 @@
 FROM debian:bookworm
 
 RUN apt-get update -y && \
-    apt-get install -y --no-install-recommends php-cli php-mbstring wget && \
+    apt-get install -y --no-install-recommends php-cli php-mysql php-mbstring wget ca-certificates && \
     rm -rf /var/lib/apt/lists/*
 
 RUN mkdir -p /var/www/adminer

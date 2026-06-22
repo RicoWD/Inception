@@ -40,7 +40,7 @@ if [ ! -f "$WP_PATH/wp-config.php" ] || [ ! -f "$FLAG" ]; then
 
     # Configure Redis object cache if available
     # set constants in wp-config.php
-    wp config set WP_REDIS_HOST redis --raw --allow-root --path="$WP_PATH" || true
+    wp config set WP_REDIS_HOST redis --allow-root --path="$WP_PATH" || true
     wp config set WP_REDIS_PORT 6379 --raw --allow-root --path="$WP_PATH" || true
 
     # Install and activate Redis cache plugin (best-effort)
