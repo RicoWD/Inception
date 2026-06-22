@@ -2,7 +2,8 @@
 <html lang="fr">
 	<head>
 		<meta charset="utf-8">
-		<link rel="stylesheet" type="text/css" href="index.css">
+		<link rel="icon" type="image/png" href="assets/images/logo.png">
+		<link rel="stylesheet" type="text/css" href="index.css?v=3">
 		<!-- <link href="css/icomoon.css" rel="stylesheet"> -->
 			<title>John Doe</title>
 	</head>
@@ -150,19 +151,52 @@ Before code, I worked in marketing, where I learned to truly understand what a c
 			</section>
 
 			<section id="myPhotos">
-				<h4>My Photos</h4>
+				<h4>My Projects</h4>
 				<article id="gallery">
-					<ul>
+					<ul class="legend">
+						<li class="type-devops">DevOps / Système</li>
+						<li class="type-web">Web / Multi-langage</li>
+						<li class="type-graphics">Graphisme</li>
+						<li class="type-system">Système / Processus</li>
+						<li class="type-algo">Algorithmie</li>
+						<li class="type-lib">Bibliothèque C</li>
+					</ul>
+					<ul class="projectGrid">
 						<div>
-							<li><figure><img src="assets/images/wedding (1).jpg" alt="Mariage"></figure></li>
-							<li><figure><img src="assets/images/rocks.jpg" alt="Paysage rochers"></figure></li>
-							<li><figure><img src="assets/images/sailboat.jpg" alt="Voilier"></figure></li>
+							<li><a class="projectCard type-devops" href="https://github.com/RicoWD/Inception" target="_blank" rel="noopener">
+								<h5 class="projectName">Inception</h5>
+								<p class="projectLang">Docker · Shell · Makefile</p>
+							</a></li>
+							<li><a class="projectCard type-web" href="https://github.com/The-42-Chosen/Les-Tontons-Forkeurs-Enrolent-Fmotte" target="_blank" rel="noopener">
+								<h5 class="projectName">Webserv</h5>
+								<p class="projectLang">C++ · Python · PHP · Shell</p>
+							</a></li>
+							<li><a class="projectCard type-graphics" href="https://github.com/The-42-Chosen/Cube3D_Rico-Billy" target="_blank" rel="noopener">
+								<h5 class="projectName">cub3D</h5>
+								<p class="projectLang">C · MiniLibX</p>
+							</a></li>
+							<li><a class="projectCard type-graphics" href="https://github.com/RicoWD/C2-P1-So_Long" target="_blank" rel="noopener">
+								<h5 class="projectName">So Long</h5>
+								<p class="projectLang">C · MiniLibX</p>
+							</a></li>
 						</div>
 						<div>
-							<li><figure><img src="assets/images/underwater.jpg" alt="Sous-marine"></figure></li>
-							<li><figure><img src="assets/images/chef.jpg" alt="Chef"></figure></li>
-							<li><figure><img src="assets/images/wedding (1).jpg" alt="Mariage"></figure></li>
-							<li><figure><img src="assets/images/p6.jpg" alt="Machine à écrire"></figure></li>
+							<li><a class="projectCard type-system" href="https://github.com/RicoWD/C2-P3-Pipex" target="_blank" rel="noopener">
+								<h5 class="projectName">Pipex</h5>
+								<p class="projectLang">C</p>
+							</a></li>
+							<li><a class="projectCard type-algo" href="https://github.com/RicoWD/C2-P2-Push_swap" target="_blank" rel="noopener">
+								<h5 class="projectName">Push Swap</h5>
+								<p class="projectLang">C</p>
+							</a></li>
+							<li><a class="projectCard type-lib" href="https://github.com/RicoWD/C1-P2-Printf" target="_blank" rel="noopener">
+								<h5 class="projectName">Printf</h5>
+								<p class="projectLang">C</p>
+							</a></li>
+							<li><a class="projectCard type-lib" href="https://github.com/RicoWD/C1-P1_Get-Next-Line" target="_blank" rel="noopener">
+								<h5 class="projectName">Get Next Line</h5>
+								<p class="projectLang">C</p>
+							</a></li>
 						</div>
 
 					</ul>
