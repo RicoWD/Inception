@@ -75,6 +75,8 @@ AI tooling was used for:
 All generated changes were manually reviewed, adjusted, and validated.
 
 ## Resources
+
+### Mandatory
 - Docker
 > https://docs.docker.com/
 > https://docs.docker.com/compose/compose-file/
@@ -89,3 +91,15 @@ All generated changes were manually reviewed, adjusted, and validated.
 - NGINX
 > https://github.com/The-42-Chosen/Les-Tontons-Forkeurs-Enrolent-Fmotte/
 > https://nginx.org/en/docs/http/ngx_http_ssl_module.html
+
+### Bonus
+- FTP
+> https://hub.docker.com/r/garethflowers/ftp-server
+> https://www.youtube.com/watch%3Fv%3DMomrc3t8y3M&ved=2ahUKEwiOm-2s8ZmVAxXHFRAIHRHDNZYQtwJ6BAgSEAI&usg=AOvVaw1HCpHTAJDsq2M7kBGW7Y5Q
+> https://github.com/Vikingu-del/Inception-Guide/blob/main/Ftp.md
+- Adminer
+> https://hub.docker.com/_/adminer/
+- Redis
+> https://hub.docker.com/_/redis
+> https://medium.com/redis-with-raphael-de-lio/how-to-run-redis-locally-in-a-docker-container-and-manage-it-with-redis-insight-and-redis-cli-14b0af54e1d2
+
