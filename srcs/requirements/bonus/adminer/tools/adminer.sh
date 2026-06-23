@@ -2,4 +2,6 @@
 
 set -e
 
-exec php -S 0.0.0.0:8080 -t /var/www/adminer
+: "${ADMINER_PORT:=8080}"
+
+exec php -S "0.0.0.0:${ADMINER_PORT}" -t /var/www/adminer

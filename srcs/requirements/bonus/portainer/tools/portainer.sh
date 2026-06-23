@@ -6,4 +6,6 @@ mkdir -p /data
 
 cd /opt/portainer
 
-exec ./portainer --bind=0.0.0.0:9000 --data /data
+: "${PORTAINER_PORT:=9000}"
+
+exec ./portainer --bind="0.0.0.0:${PORTAINER_PORT}" --data /data

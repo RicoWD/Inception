@@ -1,9 +1,9 @@
 #!/bin/sh
 set -e
 
-: "${NGINX_PORT:=443}"
+: "${STATIC_WS_PORT:=8081}"
 
-envsubst '${NGINX_PORT}' \
+envsubst '${STATIC_WS_PORT}' \
 	< /etc/nginx/templates/default.conf.template \
 	> /etc/nginx/conf.d/default.conf
 

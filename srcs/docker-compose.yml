@@ -48,8 +48,10 @@ services:
     container_name: adminer
     depends_on:
       - mariadb
+    environment:
+      ADMINER_PORT: ${ADMINER_PORT}
     ports:
-      - "8080:8080"
+      - "${ADMINER_PORT}:${ADMINER_PORT}"
     networks:
       - inception
     restart: always
@@ -59,8 +61,10 @@ services:
     container_name: nginx
     depends_on:
       - wordpress
+    environment:
+      NGINX_PORT: ${NGINX_PORT}
     ports:
-      - "443:443"
+      - "${NGINX_PORT}:${NGINX_PORT}"
     volumes:
       - wordpress_data:/var/www/html
     networks:
@@ -92,9 +96,12 @@ services:
     environment:
       FTP_USER: ${FTP_USER}
       FTP_PASS: ${FTP_PASS}
+      FTP_PORT: ${FTP_PORT}
+      FTP_PASV_MIN: ${FTP_PASV_MIN}
+      FTP_PASV_MAX: ${FTP_PASV_MAX}
     ports:
-      - "21:21"
-      - "21100-21110:21100-21110"
+      - "${FTP_PORT}:${FTP_PORT}"
+      - "${FTP_PASV_MIN}-${FTP_PASV_MAX}:${FTP_PASV_MIN}-${FTP_PASV_MAX}"
     volumes:
       - wordpress_data:/var/www/html
     networks:
@@ -106,8 +113,10 @@ services:
       context: ./requirements/bonus/static_ws
     image: static_ws:inception
     container_name: static_ws
+    environment:
+      STATIC_WS_PORT: ${STATIC_WS_PORT}
     ports:
-      - "8081:80"
+      - "${STATIC_WS_PORT}:${STATIC_WS_PORT}"
     networks:
       - inception
     restart: always
@@ -117,8 +126,10 @@ services:
       context: ./requirements/bonus/portainer
     image: portainer:inception
     container_name: portainer
+    environment:
+      PORTAINER_PORT: ${PORTAINER_PORT}
     ports:
-      - "9000:9000"
+      - "${PORTAINER_PORT}:${PORTAINER_PORT}"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - portainer_data:/data
