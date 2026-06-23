@@ -61,12 +61,13 @@ This project demonstrates how to package an application stack as reproducible co
 5. For Adminer http://erpascua.42.fr:8080.
 6. For static WS http://erpascua.42.fr:8081.
 7. For Portainer `docker restart portainer` & http://erpascua.42.fr:9000.
-8. For Redis 
+8. For Redis
 ```bash
 docker exec wordpress wp redis status --allow-root --path=/var/www/html/wordpress
 docker exec redis redis-cli monitor
 ```
 9. For FTP `ftp -p localhost 21`
+
 
 ### Useful commands
 - `make up`
@@ -115,3 +116,5 @@ All generated changes were manually reviewed, adjusted, and validated.
 - Portainer
 > https://hub.docker.com/r/portainer/portainer
 > https://docs.portainer.io
+> https://docs.portainer.io/advanced/cli#community-edition-2
+
