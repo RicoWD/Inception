@@ -14,6 +14,7 @@ RUN wget -q https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli
     chmod +x /usr/local/bin/wp
 
 COPY ./tools/wp_script.sh /usr/local/bin/wp_script.sh
+COPY ./backup /backup
 
 RUN chmod +x /usr/local/bin/wp_script.sh && \
     mkdir -p /var/www/html/wordpress
