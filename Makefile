@@ -42,10 +42,23 @@ backup:
 	@docker cp wordpress:/tmp/wp-content.tar.gz $(BACKUP_DIR)/wp-content.tar.gz
 	@echo "Backup written to $(BACKUP_DIR) -> commit it to persist your site across rebuilds."
 
+restore:
+	@test -f $(BACKUP_DIR)/wordpress.sql || { echo "No backup found in $(BACKUP_DIR). Run 'make backup' first."; exit 1; }
+	@echo "Importing WordPress database..."
+	@docker cp $(BACKUP_DIR)/wordpress.sql wordpress:/tmp/wordpress.sql
+	@docker exec wordpress wp db import /tmp/wordpress.sql --allow-root --path=/var/www/html/wordpress
+	@if [ -f $(BACKUP_DIR)/wp-content.tar.gz ]; then \
+		echo "Restoring wp-content (themes, plugins, uploads)..."; \
+		docker cp $(BACKUP_DIR)/wp-content.tar.gz wordpress:/tmp/wp-content.tar.gz; \
+		docker exec wordpress tar xzf /tmp/wp-content.tar.gz -C /var/www/html/wordpress; \
+		docker exec wordpress chown -R www-data:www-data /var/www/html/wordpress/wp-content; \
+	fi
+	@echo "Restore complete."
+
 status:
 	@$(DOCKER_COMPOSE) ps
 
 logs:
 	@$(DOCKER_COMPOSE) logs -f
 
-.PHONY: all setup up down stop start clean fclean re status logs backup
+.PHONY: all setup up down stop start clean fclean re status logs backup restore
