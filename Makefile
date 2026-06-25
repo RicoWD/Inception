@@ -55,10 +55,20 @@ restore:
 	fi
 	@echo "Restore complete."
 
+# Full cycle: save the site, rebuild from scratch, wait for WP, restore the site.
+redeploy:
+	@$(MAKE) backup || echo "No running stack to back up, skipping backup."
+	@$(MAKE) re
+	@echo "Waiting for WordPress to be ready..."
+	@until docker exec wordpress wp core is-installed --allow-root --path=/var/www/html/wordpress >/dev/null 2>&1; do \
+		sleep 2; \
+	done
+	@$(MAKE) restore
+
 status:
 	@$(DOCKER_COMPOSE) ps
 
 logs:
 	@$(DOCKER_COMPOSE) logs -f
 
-.PHONY: all setup up down stop start clean fclean re status logs backup restore
+.PHONY: all setup up down stop start clean fclean re status logs backup restore redeploy
