@@ -54,7 +54,10 @@ This project demonstrates how to package an application stack as reproducible co
 - Domain mapping in /etc/hosts to point login.42.fr to local IP.
 
 ### Run
-1. If needed, add Inception project to VM with `scp -r -P 4242 ../Inception erpascua@localhost:Inception`
+1. If needed, add Inception project to VM with 
+```shell
+scp -r -P 4242 ../Inception/. erpascua@localhost:
+```
 2. Update values in srcs/.env for your local setup.
 3. Run make.
 4. Open https://erpascua.42.fr.
