@@ -56,7 +56,7 @@ This project demonstrates how to package an application stack as reproducible co
 ### Run
 1. If needed, add Inception project to VM with 
 ```shell
-scp -r -P 4242 ../Inception/. erpascua@localhost:
+scp -r -P 4242 ../Inception/. erpascua@localhost:Inception
 ```
 2. Update values in srcs/.env for your local setup.
 3. Run make.
